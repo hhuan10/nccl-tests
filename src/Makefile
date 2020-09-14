@@ -35,8 +35,8 @@ endif
 
 NVCUFLAGS  := -ccbin $(CXX) $(NVCC_GENCODE) -std=c++11
 
-LDFLAGS    := -L${CUDA_LIB} -lcudart -lrt
-NVLDFLAGS  := -L${CUDA_LIB} -lcudart -lrt
+LDFLAGS    := -L${CUDA_LIB} -lcudart_static -lrt
+NVLDFLAGS  := -L${CUDA_LIB} -lcudart_static -lrt
 
 ifeq ($(DEBUG), 0)
 NVCUFLAGS += -O3 -g
